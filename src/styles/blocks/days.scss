@@ -9,8 +9,7 @@
   &__day {
     @include block-template;
 
-    transition: background-color 0.5s;
-    transition: transform 0.5s;
+    transition: background-color 0.5s, transform 0.5s;
     transform: translateY(0);
 
     &:hover {
