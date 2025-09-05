@@ -1,0 +1,23 @@
+.calendar {
+  display: flex;
+  gap: $gap;
+  width: calc((7 * $day-size) + (6 * $gap) + (2 * $padding));
+  flex-wrap: wrap;
+
+  &__day {
+    @include block-template;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $secondary-color-bg;
+      transform: translate(0, -20px);
+      transition-duration: 0.5s;
+    }
+
+    &::before {
+      content: '';
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+    }
+  }
+}
